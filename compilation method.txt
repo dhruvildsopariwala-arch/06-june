@@ -1,0 +1,10 @@
+C:\Users\dhruv>D:
+
+D:\>cd TOPS
+
+D:\TOPS>javac demo.java
+
+D:\TOPS>java Demo
+Hello java
+
+D:\TOPS>
