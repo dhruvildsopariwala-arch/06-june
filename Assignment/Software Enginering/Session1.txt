@@ -1,0 +1,35 @@
+Question-1 Name 5 IT job roles and write one line about what each role does?
+Answer: Backend Developer – Builds and maintains the server-side part of websites and applications.
+        Frontend Developer – Builds the part of a website or application that users see and interact with.
+        DevOps Engineer – Bridges development and operations teams to make software deployment faster, more reliable, and automated.
+        Web Designer – Creates the visual design and layout of websites to make them attractive and user-friendly.
+        Software Developer – Develops software applications by writing, testing, and maintaining code.
+
+Question-2 List 3 product companies and 3 service companies with one example of work each does?
+Answer: Google – Develops products like Google Search, Gmail, and Android
+        Microsoft – Creates software products such as Windows, Microsoft 365, and Azure.
+        Adobe – Develops creative software like Photoshop and Premiere Pro.
+        Tata Consultancy Services (TCS) – Provides software development and IT consulting services for clients.
+        Infosys – Offers digital transformation, cloud, and technology services.
+        Wipro – Provides IT services, business consulting, and application maintenance.
+
+Question-3 Write the full forms and one-line use of: GitHub, Slack, Jira, IDE, API?
+Answer: Github-Used to store, manage, and collaborate on software code.
+        Slack-Used for team communication and collaboration.
+        Jira-Used for project management, bug tracking, and task tracking.
+        IDE-(Integrated Development Environment)Used to write, test, and debug computer programs.
+        API-(Application Programming Interface)Used to allow different software applications to communicate with each other.
+
+Question-4 Name any 5 programming languages and mention one popular use case for each?
+Answer: Java-Banking Applications – Used to build secure and reliable banking systems.
+        Python-Python is widely used for data analysis, machine learning, and AI applications because of its simple syntax and powerful libraries.
+        C - C is widely used to develop operating systems because it provides low-level access to hardware and efficient performance.
+        C++ - C++ is widely used to create high-performance video games and game engines.
+        Javascript-JavaScript is commonly used to make websites interactive, such as menus, forms, and animations.
+
+Question-5 What is the difference between a developer and a tester? Answer in 2 lines?
+Answer: A developer writes and builds software features and applications.
+        A tester checks the software for bugs and ensures it works correctly before release.
+
+
+
