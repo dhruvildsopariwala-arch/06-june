@@ -1,0 +1,27 @@
+Question 1: Write the full form and one-line use of: HTTP, HTTPS, FTP, SMTP?
+Answer: HTTP: (HyperText Transfer Protocol)Used to transfer web pages between a browser and a web server.
+        HTTPS: (HyperText Transfer Protocol Secure) Used to securely transfer web pages with encryption.
+        FTP: (File Transfer Protocol) Used to upload and download files between computers over a network.
+        SMTP: (Simple Mail Transfer Protocol) Used to send emails from one mail server to another.
+
+Question 2: What is the difference between IPv4 and IPv6? Answer in 2 lines?
+Answer: IPv4 uses 32-bit addresses and looks like `192.168.1.1`.
+        IPv6 uses 128-bit addresses, provides many more IP addresses, and looks like `2001:db8::1`.
+
+
+Question 3: Run nslookup google.com on your system and write down the IP address you get?
+Answer:
+
+Question 4: What do these HTTP status codes mean: 200, 301, 404, 500, 403?
+Answer: 200 OK – The request was successful.
+        301 Moved Permanently – The page has been permanently moved to a new URL.
+        404 Not Found – The requested page or resource does not exist.
+        500 Internal Server Error – The server encountered an unexpected problem.
+        403 Forbidden – Access to the requested resource is denied.
+
+Question 5: Explain DNS hierarchy (root, TLD, domain, subdomain) with www.google.com as an example.
+Answer:
+
+
+
+

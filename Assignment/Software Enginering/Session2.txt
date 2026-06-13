@@ -1,0 +1,34 @@
+Question 1: What are the three main layers of software architecture? Write one line about each?
+Answer: Presentation layer: It's the most visible layer and defines the application's overall 
+                            look and presentation to the end-users.
+        Business layer:  Business logic is a collection of rules that tell the system how to run an 
+                            application, based on the organization's guidelines. 
+        Database layer: The database layer is where the system stores all the data. It's the lowest tier in the 
+                        software architecture and houses not only data but indexes and tables as well. 
+
+Question 2: Define client and server in your own words with one real-life example?
+Answer: Client: A client is a device or application that requests services or information from another computer.
+        Example: When you open Google Chrome and visit YouTube, your browser acts as the client by requesting videos,
+        Server: A server is a computer or system that provides services, data, or resources to clients.
+        Example: YouTube's computers act as the server by sending the videos to your device.
+
+Question 3: Write 2 differences each between desktop apps, web apps, and mobile apps?
+Answer: Desktop Apps
+        1. Installed directly on a computer and can usually run without the internet.
+        2. Generally offer better performance because they use the computer's resources.
+
+        Web Apps
+        1. Run inside a web browser; no installation is needed.
+        2. Can be accessed from any device with an internet connection.
+
+        Mobile Apps
+        1. Designed specifically for smartphones and tablets.
+        2. Can use phone features like the camera, GPS, and notifications.
+
+
+Question 4: Name any 3 databases and mention whether each is SQL or NoSQL
+Answer: Oracle Database – SQL
+        Microsoft SQL Server – SQL
+        Cassandra – NoSQL
+
+
