@@ -10,7 +10,13 @@ Answer: IPv4 uses 32-bit addresses and looks like `192.168.1.1`.
 
 
 Question 3: Run nslookup google.com on your system and write down the IP address you get?
-Answer:
+Answer:  dhruvil@dhruvildsopariwala-Mac ~ % nslookup google.com
+            Server:8.8.8.8
+            Address:8.8.8.8#53
+
+            Non-authoritative answer:
+            Name:google.com
+            Address: 142.251.222.110
 
 Question 4: What do these HTTP status codes mean: 200, 301, 404, 500, 403?
 Answer: 200 OK – The request was successful.
@@ -20,7 +26,10 @@ Answer: 200 OK – The request was successful.
         403 Forbidden – Access to the requested resource is denied.
 
 Question 5: Explain DNS hierarchy (root, TLD, domain, subdomain) with www.google.com as an example.
-Answer:
+Answer: Root : highest level in DNS hierarchy represented by ".".
+        TLD : ".com" is the top level domain.
+        Domain : "google" is the domain name registered under .com.
+        Subdomain : "www" is subdomain of google.com used to access website.
 
 
 
