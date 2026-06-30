@@ -1,0 +1,35 @@
+Session 2: Writing Your First C Program - Topics:Setting Up Environment -Installing a C Compiler (e.g., GCC), Choosing an IDE (DevC++. VS Code, Codeblocks, etc) Basic structure of C program (header, main, return).Compile and run using GCC or VS Code terminal.Example: “Hello, TOPS Technologies!”
+
+Question 1 : Install GCC on your computer and verify the installation by running gcc --version in your terminal or command prompt.
+Answer: C:\Users\dhruv> gcc --version
+gcc (MinGW.org GCC-6.3.0-1) 6.3.0
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Question 2 : Open VS Code or DevC++ and create a new file named hello.c. Write a C program that prints 'Hello, Instagram World!' to the console.
+Answer: D:\TOPS\Assignment\Software Enginering\Intro to Program\hello.c
+
+        #include <stdio.h>
+
+int main() {
+    printf("Hello, Instagram World!\n");
+    return 0;
+}
+
+Question 3 : Identify and label the header, main function, and return statement in your hello.c program using comments.
+Answer: 
+// Header file
+#include <stdio.h>
+
+// Main function
+int main() {
+
+    printf("Hello, Instagram World!\n");
+
+    // Return statement
+    return 0;
+}
+
+Question 4 : Compile your hello.c file using the GCC command line (gcc hello.c -o hello) and run the output file to display the message in your terminal.<br><br><em><strong>Hint:</strong> On Windows, the output file will be hello.exe; on Linux/Mac, it will be hello.</em>
+Answer: 

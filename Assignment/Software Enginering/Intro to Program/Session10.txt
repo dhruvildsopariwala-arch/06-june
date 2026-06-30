@@ -1,0 +1,13 @@
+ession 10: StringsTopics:Declaring and handling strings.Common functions: strlen(), strcpy(), strcmp().Example: Create a username from name input.
+
+Question 1: Declare a string variable called songTitle and assign it the value 'Tum Hi Ho'. Print the length of the string using strlen().
+Answer:
+
+Question 2:Take input for two usernames (as strings) and compare them using strcmp(). Display whether they are the same or different.
+Answer:
+
+Question 3:Copy the string 'Flipkart' into another string variable called shoppingApp using strcpy(), then print the value of shoppingApp.<br><br><em><strong>Hint:</strong> Make sure to declare enough space for the destination string.</em>
+Answer:
+
+Question 4: Build a small script that takes the user's full name as input and creates a username by copying only the first 5 characters using strcpy(). Print the generated username.<br><br><em><strong>Constraint:</strong> If the name is shorter than 5 characters, use the full name as the username.</em>
+Answer:

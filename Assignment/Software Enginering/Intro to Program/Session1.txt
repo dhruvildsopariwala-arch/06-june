@@ -1,0 +1,58 @@
+Session 1: What is Programming?Topics:Define “program” and “programming language.”Explain compilers and interpreters.Discuss importance of algorithms and flowcharts.Trainer Activity: Draw a flowchart for “Ordering food online.”
+
+Question 1 : Write a short paragraph in your own words defining what a 'program' is and give one real-life example from any app you use daily (like Instagram, Zomato, or Paytm).
+Answer: A program is a set of instructions that tells a computer what to do to complete a specific task. It works in the background and helps apps perform different functions without us noticing. For example, when I use Instagram, the program loads my feed, shows new posts, and lets me like or comment on photos.
+
+Question 2 : List three popular programming languages you have heard of, and for each, mention whether it is usually compiled, interpreted, or can be both.<br><br><em><strong>Hint:</strong> Think of languages like Java, Python, and JavaScript.</em>
+Answer: Java usually Compiled (into bytecode, then runs on the JVM) 
+        Pyhton usually Interpreted
+        JavaScript usually Interpreted (modern engines also use JIT compilation) 
+
+Question 3 : Draw a flowchart (on paper or using any online tool) for the process of booking a movie ticket on BookMyShow, starting from opening the app to receiving the booking confirmation.
+Answer:  START
+          |
+          v
+   Open BookMyShow
+          |
+          v
+    Select City
+          |
+          v
+    Choose Movie
+          |
+          v
+ Select Date & Time
+          |
+          v
+    Pick Your Seats
+          |
+          v
+ Confirm Seat Selection
+          |
+          v
+   Make the Payment
+          |
+          v
+   Payment Successful?
+      /           \
+    No             Yes
+    |               |
+    v               v
+Retry Payment   Booking Confirmed
+    |               |
+    -------> Receive Ticket
+                    |
+                    v
+                   END
+
+Question 4 : Write down the steps (as an algorithm, using simple numbered instructions) for ordering food on Swiggy — from opening the app to completing payment.
+Answer: 1. Open the Swiggy app on your phone.
+        2. Enter or confirm your delivery location.
+        3. Search for the restaurant or food you want.
+        4. Select the dishes and add them to your cart.
+        5. Check your order and change the quantity if needed.
+        6. Tap **Proceed to Checkout**.
+        7. Choose your delivery address and payment method.
+        8. Complete the payment.
+        9. Wait for the order confirmation and track your delivery.
+
