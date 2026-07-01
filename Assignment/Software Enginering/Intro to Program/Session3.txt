@@ -1,0 +1,25 @@
+Session 3: Data Types and VariablesTopics:Data types (int, float, char, double).Variable naming rules.Constants, literals.Example: Store and print student’s name, age, marks.
+
+Question 1 : Declare variables for a Flipkart product: productName (as a string), price (float), and rating (double). Assign sample values and print each variable with its data type.
+Answer: #include <stdio.h>
+
+        int main() {
+            char productName[] = "Iphone 17";
+            int price = 80000;
+            double rating = 4.7;
+
+            printf("Product Name (string): %s\n", productName);
+            printf("Price (int): %d\n", price);
+            printf("Rating (double): %.lf\n", rating);
+
+            return 0;
+        }
+
+Question 2 : Create a constant variable to store the GST rate (for example, 18%) and use it to calculate the final price of a Zomato order with a given base price.<br><br><em><strong>Constraint:</strong> The GST rate must not be changeable after its initial assignment.</em>
+Answer:
+
+Question 3 : Write a program that stores your favorite Spotify playlist's name (string), total number of songs (int), and average song duration in minutes (float). Print all values in a single formatted sentence.
+Answer:
+
+Question 4 : Identify and correct the invalid variable names from this list: 1stPlayer, player_age, $score, total-marks, userName.<br><br><em><strong>Hint:</strong> Apply standard variable naming rules for your programming language.</em>
+Answer:
