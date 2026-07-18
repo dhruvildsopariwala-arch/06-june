@@ -1,0 +1,13 @@
+Session 9: ArraysTopics:1D & 2D Arrays, Array Traversal.Example: Record 7-day screen time & calculate average.
+
+Question 1: Declare a 1D array called dailySteps with 7 elements to store your step count for each day of the week, assign sample values, and print each value using a loop.
+Answer:
+
+Question 2: Create a 2D array called playlistRatings to store ratings for 3 Spotify playlists over 5 days (rows = playlists, columns = days). Fill it with sample numbers and print the ratings for the second playlist.
+Answer:
+
+Question 3: Build a function that takes a 1D array of 7 integers representing your daily Zomato order amounts and calculates the average spend for the week.<br><br><em><strong>Hint:</strong> Use a loop to sum the values, then divide by the array length.</em>
+Answer:
+
+Question 4: Given a 2D array called cricketScores where each row represents an IPL match and columns represent runs scored by each team, write code to print the highest score from each match.
+Answer:

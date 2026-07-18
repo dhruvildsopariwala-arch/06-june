@@ -1,0 +1,14 @@
+Session 6: Loops (For, While, Do-While)Topics:Difference between entry-controlled and exit-controlled loops.Use cases (e.g., menu-driven programs).Example: Countdown timer using loops.
+
+
+Question 1: Write a program that prints the numbers from 10 down to 1 using a for loop, similar to a countdown timer.
+Answer:
+
+Question 2: Create a menu-driven console app that lets the user: 1) View your favorite 3 IPL teams, 2) Add a new team, 3) Exit. Use a while loop to keep showing the menu until the user chooses Exit.<br><br><em><strong>Hint:</strong> Use input() (or Scanner in Java) to get the user's choice each time.</em>
+Answer:
+
+Question 3: Build a 'Guess the Song' game like Spotify — the program randomly picks a song name from a list and asks the user to guess it. Use a do-while loop so the user can keep guessing until they get it right.<br><br><em><strong>Constraint:</strong> Use at least 3 song names of your choice.</em>
+Answer:
+
+Question 4:Explain with your own example the difference between entry-controlled and exit-controlled loops by writing a short code snippet for each (for/while vs do-while) and describing what happens if the loop condition is false at the start.
+Answer: 

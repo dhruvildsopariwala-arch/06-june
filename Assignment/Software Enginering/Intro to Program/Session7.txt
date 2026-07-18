@@ -1,0 +1,16 @@
+Session 7: Nested Loops & Pattern PrintingTopics:Using nested loops for grids or triangle patterns.Example: Star pyramid pattern.
+
+Question 1:Use nested for loops to print a grid of emojis representing a 5x5 Instagram post feed, where each cell shows a 📷 symbol.
+Answer:
+
+Question 2: Build a right-angled triangle pattern using nested loops, where each row displays increasing numbers starting from 1, similar to how a leaderboard on a gaming app shows rank numbers.
+Answer:
+
+Question 3:Create a pattern that prints a pyramid of stars (*) with 6 rows, centered like the loading animation you see on BookMyShow when a page is loading.<br><br><em><strong>Hint:</strong> Use spaces to align the stars in the center for each row.</em>
+Answer:
+
+Question 4: Write code using nested loops to print a pattern of alternating 0s and 1s in a grid, like the checkered background seen in some Spotify playlist covers (e.g., for a 4x4 grid, alternate 0 and 1 in each cell).
+Answer:
+
+Question 5: Modify your pyramid pattern code to accept the number of rows as user input, so the user can set the height of the pyramid before printing.
+Answer:
