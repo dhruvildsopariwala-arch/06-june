@@ -4,15 +4,103 @@ Session 4: Operators and ExpressionsTopics:Arithmetic, Logical, Relational, Incr
 
 Question 1 : Create a simple JavaScript function called calculateTotal that takes two numbers: itemPrice and quantity, and returns the total bill amount using arithmetic operators.
 Answer: 
+#include <stdio.h>
+
+int calculateTotal(int itemPrice, int quantity)
+{
+    int total;
+
+    total = itemPrice * quantity;
+
+    return total;
+}
+
+int main()
+{
+    int price = 350;
+    int quantity = 3;
+
+    printf("Total Bill = %d", calculateTotal(price, quantity));
+
+    return 0;
+}
 
 Question 2 : Build a Flipkart-style discount calculator: given product price, discount percentage, and a boolean isMember, use arithmetic and logical operators to calculate the final price (apply an extra 5% off if isMember is true).
 Answer:
+#include <stdio.h>
+
+int main()
+{
+    float price, discount, finalPrice;
+    int isMember;
+
+    printf("Enter product price: ");
+    scanf("%f", &price);
+
+    printf("Enter discount percentage: ");
+    scanf("%f", &discount);
+
+    printf("Are you a member? (1 for Yes, 0 for No): ");
+    scanf("%d", &isMember);
+
+    finalPrice = price - (price * discount / 100);
+
+    if (isMember)
+    {
+        finalPrice = finalPrice - (finalPrice * 5 / 100);
+    }
+
+    printf("Final Price = %.2f\n", finalPrice);
+
+    return 0;
+}
 
 Question 3 : Write a function isEligibleForOffer that takes a user's age and total order value, and returns true if the user is 18 or older AND the order value is above 500, otherwise false.<br><br><em><strong>Hint:</strong> Use relational and logical operators together.</em>
 Answer:
 
 Question 4 : Given three variables: likes, comments, and shares (all numbers), write code to check if a post is 'trending' on Instagram (at least 1000 likes OR more than 200 comments AND at least 50 shares). Print the result.
 Answer:
+#include <stdio.h>
 
+int main()
+{
+    int likes, comments, shares;
+
+    printf("Enter likes: ");
+    scanf("%d", &likes);
+
+    printf("Enter comments: ");
+    scanf("%d", &comments);
+
+    printf("Enter shares: ");
+    scanf("%d", &shares);
+
+    if (likes >= 1000 || (comments > 200 && shares >= 50))
+    {
+        printf("Post is Trending");
+    }
+    else
+    {
+        printf("Post is Not Trending");
+    }
+
+    return 0;
+}
 Question 5 : Write a code snippet that demonstrates the difference between pre-increment (++count) and post-increment (count++) by logging the values before and after using both on a followerCount variable.Answer:
 Answer:
+#include <stdio.h>
+
+int main()
+{
+    int followerCount = 250;
+
+    printf("Initial followers = %d\n", followerCount);
+
+    printf("Using post-increment: %d\n", followerCount++);
+    printf("Followers after post-increment = %d\n", followerCount);
+
+    printf("Using pre-increment: %d\n", ++followerCount);
+    printf("Followers after pre-increment = %d\n", followerCount);
+
+    return 0;
+}
