@@ -71,6 +71,70 @@ int main()
 }
 Question 3: Build a 'Guess the Song' game like Spotify — the program randomly picks a song name from a list and asks the user to guess it. Use a do-while loop so the user can keep guessing until they get it right.<br><br><em><strong>Constraint:</strong> Use at least 3 song names of your choice.</em>
 Answer:
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char song[3][20] = {"Believer", "Perfect", "Kesariya"};
+    char guess[20];
+    int n = 1;   // Change to 0, 1, or 2 to select a song
+
+    printf("Guess the Song Game\n");
+
+    do
+    {
+        printf("Enter song name: ");
+        scanf("%s", guess);
+
+        if (strcmp(guess, song[n]) == 0)
+        {
+            printf("Correct Guess!\n");
+        }
+        else
+        {
+            printf("Wrong! Try Again.\n");
+        }
+
+    } while (strcmp(guess, song[n]) != 0);
+
+    return 0;
+}
 
 Question 4:Explain with your own example the difference between entry-controlled and exit-controlled loops by writing a short code snippet for each (for/while vs do-while) and describing what happens if the loop condition is false at the start.
 Answer: 
+1. Entry-Controlled Loop (while)
+In an entry-controlled loop, the condition is checked before the loop starts. If the condition is false, the loop will not run even once.
+#include <stdio.h>
+
+int main()
+{
+    int i = 5;
+
+    while(i < 5)
+    {
+        printf("%d\n", i);
+        i++;
+    }
+
+    printf("Loop End");
+    return 0;
+}
+
+2. Exit-Controlled Loop (do-while)
+In an exit-controlled loop, the condition is checked after the loop body. So the loop always runs at least one time.
+#include <stdio.h>
+
+int main()
+{
+    int i = 5;
+
+    do
+    {
+        printf("%d\n", i);
+        i++;
+    } while(i < 5);
+
+    printf("Loop End");
+    return 0;
+}
