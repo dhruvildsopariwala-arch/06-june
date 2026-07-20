@@ -3,10 +3,72 @@ Session 6: Loops (For, While, Do-While)Topics:Difference between entry-controlle
 
 Question 1: Write a program that prints the numbers from 10 down to 1 using a for loop, similar to a countdown timer.
 Answer:
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    printf("Countdown:\n");
+
+    for (i = 10; i >= 1; i--)
+    {
+        printf("%d\n", i);
+    }
+
+    printf("Time's up!");
+
+    return 0;
+}
 
 Question 2: Create a menu-driven console app that lets the user: 1) View your favorite 3 IPL teams, 2) Add a new team, 3) Exit. Use a while loop to keep showing the menu until the user chooses Exit.<br><br><em><strong>Hint:</strong> Use input() (or Scanner in Java) to get the user's choice each time.</em>
 Answer:
+#include <stdio.h>
+#include <string.h>
 
+int main()
+{
+    int choice;
+    char team1[20] = "MI";
+    char team2[20] = "CSK";
+    char team3[20] = "RCB";
+    char newTeam[20];
+
+    while (1)
+    {
+        printf("\n1. View Favourite Teams");
+        printf("\n2. Add New Team");
+        printf("\n3. Exit");
+        printf("\nEnter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice)
+        {
+            case 1:
+                printf("\nFavourite IPL Teams:");
+                printf("\n1. %s", team1);
+                printf("\n2. %s", team2);
+                printf("\n3. %s\n", team3);
+                break;
+
+            case 2:
+                printf("Enter new team: ");
+                scanf("%s", newTeam);
+                strcpy(team3, newTeam);
+                printf("Team added successfully!\n");
+                break;
+
+            case 3:
+                printf("Thank you!\n");
+                return 0;
+
+            default:
+                printf("Invalid choice!\n");
+        }
+    }
+
+    return 0;
+}
 Question 3: Build a 'Guess the Song' game like Spotify — the program randomly picks a song name from a list and asks the user to guess it. Use a do-while loop so the user can keep guessing until they get it right.<br><br><em><strong>Constraint:</strong> Use at least 3 song names of your choice.</em>
 Answer:
 

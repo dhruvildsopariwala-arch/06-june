@@ -3,12 +3,148 @@ Session 5: Conditional StatementsTopics:If, Else If Ladder, Nested If, Switch Ca
 
 Question 1: Create a simple IPL Fan Bot that takes your favorite IPL team name as input and uses if-else-if statements to print a unique cheer message for each team (e.g., 'Go Mumbai Indians!', 'Chennai Super Kings for the win!'). If the team is not recognized, print 'Team not found!'
 Answer:
+#include <stdio.h>
+#include <string.h>
 
+int main()
+{
+    char team[30];
+
+    printf("Enter your favourite IPL team: ");
+    scanf("%s", team);
+
+    if (strcmp(team, "MI") == 0)
+    {
+        printf("Go Mumbai Indians!");
+    }
+    else if (strcmp(team, "CSK") == 0)
+    {
+        printf("Chennai Super Kings for the win!");
+    }
+    else if (strcmp(team, "RCB") == 0)
+    {
+        printf("Ee Sala Cup Namde!");
+    }
+    else if (strcmp(team, "KKR") == 0)
+    {
+        printf("Korbo Lorbo Jeetbo!");
+    }
+    else if (strcmp(team, "GT") == 0)
+    {
+        printf(" AAVE DE !");
+    }
+    else
+    {
+        printf("Team not found!");
+    }
+
+    return 0;
+}
 Question 2: Build a Zomato-style food suggestion tool: take the user's preferred meal time ('breakfast', 'lunch', 'dinner', or 'snack') and use a switch-case statement to suggest a popular dish for that time. If the input doesn't match any meal, suggest 'Try some fruits!'.
 Answer:
+#include <stdio.h>
+
+int main()
+{
+    int choice;
+
+    printf("1. Breakfast\n");
+    printf("2. Lunch\n");
+    printf("3. Dinner\n");
+    printf("4. Snack\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch (choice)
+    {
+        case 1:
+            printf("Suggestion: Poha");
+            break;
+
+        case 2:
+            printf("Suggestion: Veg Biryani");
+            break;
+
+        case 3:
+            printf("Suggestion: Paneer Butter Masala with Naan");
+            break;
+
+        case 4:
+            printf("Suggestion: Sandwich");
+            break;
+
+        default:
+            printf("Try some fruits!");
+    }
+
+    return 0;
+}
 
 Question 3: Create a Flipkart discount calculator that asks the user for the total cart amount. Use nested if statements to check: if amount > 2000, apply 20% discount; else if amount > 1000, apply 10% discount; else, no discount. Print the final amount to pay.<br><br><em><strong>Hint:</strong> Use nested ifs to check each discount slab.</em>
 Answer:
+#include <stdio.h>
+
+int main()
+{
+    float amount, finalAmount;
+
+    printf("Enter total cart amount: ");
+    scanf("%f", &amount);
+
+    finalAmount = amount;
+
+    if (amount > 1000)
+    {
+        if (amount > 2000)
+        {
+            finalAmount = amount - (amount * 20 / 100);
+        }
+        else
+        {
+            finalAmount = amount - (amount * 10 / 100);
+        }
+    }
+    else
+    {
+        printf("No discount applied.\n");
+    }
+
+    printf("Final Amount = %.2f", finalAmount);
+
+    return 0;
+}
 
 Question 4: Write a program that takes a user's age and checks eligibility for three things using if-else statements: if age >= 18, print 'Eligible for Driving License'; if age >= 21, also print 'Eligible for Credit Card'; if age >= 25, also print 'Eligible for Car Rental'. Print all applicable messages for the given age.
 Answer:
+#include <stdio.h>
+
+int main()
+{
+    int age;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if (age >= 18)
+    {
+        printf("Eligible for Driving License\n");
+    }
+
+    if (age >= 21)
+    {
+        printf("Eligible for Credit Card\n");
+    }
+
+    if (age >= 25)
+    {
+        printf("Eligible for Car Rental\n");
+    }
+
+    if (age < 18)
+    {
+        printf("Not eligible for any of these.\n");
+    }
+
+    return 0;
+}
