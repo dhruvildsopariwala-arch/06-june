@@ -1,0 +1,55 @@
+SCENARIO 1:You are a junior developer at a fintech startup building a digital wallet app. The team is debating between Waterfall and Agile methodology. The project has frequently changing requirements and the client expects to review working features every two weeks. 
+Question: Which development methodology would you recommend for this project, and why?
+Identify two specific risks the team would face if they chose the wrong methodology for this
+context.
+
+Answer :I would choose Agile because the project requirements keep changing, and the client wants to see new features every two weeks. Agile allows the team to make changes quickly and get regular feedback from the client after each sprint.
+
+Risks if the team chooses Waterfall instead:
+
+1. If the client changes the requirements later, it will be difficult and costly to make changes.
+2. The client will not see the working product until much later, so problems or missing features may be discovered too late.
+
+So, Agile is the better choice because it supports frequent changes, regular client feedback, and faster delivery of working features.
+
+SCENARIO 2: You are collaborating on a college project website with three teammates. Just before a client demo, one teammate pushed incomplete code directly to the main branch, breaking the layout for everyone else on the team.
+Question: Describe the Git workflow your team should adopt to prevent this from happening again. Name at least two Git commands your team should use as part of this workflow and explain the role of each command.
+
+Answer: Our team should not push code directly to the main branch. Each member should create a separate branch to work on their part. After testing the code, it should be reviewed and then merged into the main branch.
+Git Commands are :
+1. git branch – Creates a new branch for a team member so everyone can work separately without affecting the main project.
+2. git checkout – Switches to the branch where you want to work.
+3. git merge – Combines the completed and tested branch into the main branch.
+
+SCENARIO 5: You are writing a C program to record daily rainfall data for a month (30 days). Youneed to store all 30 readings, calculate the monthly average, and then identify which specific days recorded rainfall above that average.
+Question: Explain why an array is the correct data structure for this task compared to using 30 separate variables. Describe the two-step logic your program would follow: first to compute the average, then to identify the above-average days — and explain why both steps cannot be done in a single loop.
+
+Answer: Answer:
+
+An array is the best choice because it stores all 30 rainfall readings in one variable. It makes the program shorter, easier to manage, and allows us to use loops. If we use 30 separate variables, the code becomes long and difficult to calculate the average or compare each day's rainfall.
+
+Program Logic:
+
+Step 1:
+Store the rainfall of all 30 days in an array and calculate the total. Then find the average by dividing the total by 30.
+
+Step 2:
+Run another loop through the array and compare each day's rainfall with the average. If the rainfall is greater than the average, print that day.
+
+Why not in one loop?
+The average is not known until all 30 rainfall values have been added. Since we need the average before comparing each day, the comparison must be done in a second loop.
+
+SCENARIO 6:You are debugging a C program that uses a pointer to traverse a string entered by the user. The program works correctly when the user types a name, but crashes immediately when the input field is left empty (the user just presses Enter).
+Question:Explain why the program crashes on an empty string input and describe the check your pointer-based solution must perform before dereferencing the pointer. How does traversing a string using a pointer differ from traversing it using array index notation, and which approach makes the empty-input bug easier to catch?
+
+Answer: The program crashes because when the user presses Enter without typing anything, the string is empty. If the pointer is used without checking the string, it may try to read invalid data, which can cause the program to crash.
+
+Before using the pointer, the program should check whether it points to the end of the string ('\0'). If the first character is '\0', it means the user entered an empty string, so the program should not continue.
+
+Pointer traversal:
+The pointer moves from one character to the next using ptr++.
+
+Array traversal:
+The array method accesses characters using an index like name[i].
+
+The array index method is easier for beginners and makes it simpler to notice an empty string by checking name[0] == '\0'. With pointers, forgetting to check before dereferencing (*ptr) can easily cause errors.
