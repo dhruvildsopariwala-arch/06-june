@@ -2,12 +2,83 @@ Session 13: File HandlingTopics:Open, write, read, close files.Modes: r, w, a.Ex
 
 Question 1: Create a file called playlist.txt and write the names of your top 3 favorite songs from Spotify into it using write mode (w).
 Answer:
+#include <stdio.h>
+
+int main()
+{
+    FILE *f;
+
+    f = fopen("playlist.txt", "w");
+
+    fprintf(f, "Perfect\n");
+    fprintf(f, "Believer\n");
+    fprintf(f, "Hymn for the Weekend\n");
+
+    fclose(f);
+
+    return 0;
+}
 
 Question 2:Open playlist.txt in read mode (r) and display each song name on a separate line in the console.
 Answer:
+#include <stdio.h>
+
+int main()
+{
+    FILE *f;
+    char song[50];
+
+    f = fopen("playlist.txt", "r");
+
+    while (fgets(song, 50, f) != NULL)
+    {
+        printf("%s", song);
+    }
+
+    fclose(f);
+
+    return 0;
+}
 
 Question 3:Add two more song names to playlist.txt without deleting the existing ones by opening the file in append mode (a).
 Answer:
+#include <stdio.h>
+
+int main()
+{
+    FILE *f;
+
+    f = fopen("playlist.txt", "a");
+
+    fprintf(f, "Levitating\n");
+    fprintf(f, "Senorita\n");
+
+    fclose(f);
+
+    return 0;
+}
 
 Question 4:Write a program that reads all song names from playlist.txt and prints only those that contain the word 'love' (case-insensitive).<br><br><em><strong>Hint:</strong> Use the 'in' keyword or equivalent string method for filtering.</em>
 Answer:
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    FILE *f;
+    char song[100];
+
+    f = fopen("playlist.txt", "r");
+
+    while(fgets(song, 100, f))
+    {
+        if(strstr(song, "love") || strstr(song, "Love") || strstr(song, "LOVE"))
+        {
+            printf("%s", song);
+        }
+    }
+
+    fclose(f);
+
+    return 0;
+}
