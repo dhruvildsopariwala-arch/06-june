@@ -24,7 +24,7 @@ Git Commands are :
 SCENARIO 5: You are writing a C program to record daily rainfall data for a month (30 days). Youneed to store all 30 readings, calculate the monthly average, and then identify which specific days recorded rainfall above that average.
 Question: Explain why an array is the correct data structure for this task compared to using 30 separate variables. Describe the two-step logic your program would follow: first to compute the average, then to identify the above-average days — and explain why both steps cannot be done in a single loop.
 
-Answer: Answer:
+Answer: 
 
 An array is the best choice because it stores all 30 rainfall readings in one variable. It makes the program shorter, easier to manage, and allows us to use loops. If we use 30 separate variables, the code becomes long and difficult to calculate the average or compare each day's rainfall.
 
