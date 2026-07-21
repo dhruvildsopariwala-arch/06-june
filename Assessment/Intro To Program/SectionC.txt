@@ -20,42 +20,36 @@ Code:
 
 struct StudyLog
 {
-    char subject[40];
+    char subject[20];
     float hours[7];
 };
 
-void report(struct StudyLog s[])
+void show(struct StudyLog s[])
 {
     int i, j;
-    float total, avg;
+    float total;
 
     for(i = 0; i < 3; i++)
     {
         total = 0;
-
-        printf("\nSubject: %s\n", s[i].subject);
 
         for(j = 0; j < 7; j++)
         {
             total = total + s[i].hours[j];
         }
 
-        avg = total / 7;
-
-        printf("Total Hours = %.1f\n", total);
-        printf("Average = %.1f\n", avg);
-
-        printf("Progress:\n");
+        printf("\n%s", s[i].subject);
+        printf("\nTotal = %.1f", total);
+        printf("\nAverage = %.1f\n", total / 7);
 
         for(j = 0; j < 7; j++)
         {
+            printf("Day %d : ", j + 1);
+
             int k;
-
-            printf("Day %d: ", j + 1);
-
-            for(k = 0; k < (int)s[i].hours[j]; k++)
+            for(k = 1; k <= s[i].hours[j]; k++)
             {
-                printf("* ");
+                printf("*");
             }
 
             printf("\n");
@@ -66,64 +60,61 @@ void report(struct StudyLog s[])
 int main()
 {
     struct StudyLog s[3] = {
-        {"Math", {0}},
-        {"Science", {0}},
-        {"English", {0}}
+        {"Math"},
+        {"English"},
+        {"Science"}
     };
 
-    int choice, day, i, j;
+    int ch, day, i, j;
     FILE *fp;
 
     while(1)
     {
-        printf("\n1. Log Study Hours");
-        printf("\n2. View Weekly Report");
-        printf("\n3. Save & Exit");
-        printf("\nEnter Choice: ");
-        scanf("%d", &choice);
+        printf("\n1. Log Study");
+        printf("\n2. Report");
+        printf("\n3. Exit");
+        printf("\nChoice: ");
+        scanf("%d", &ch);
 
-        switch(choice)
+        if(ch == 1)
         {
-            case 1:
+            printf("Day (1-7): ");
+            scanf("%d", &day);
 
-                printf("Enter Day (1-7): ");
-                scanf("%d", &day);
+            for(i = 0; i < 3; i++)
+            {
+                printf("%s Hours: ", s[i].subject);
+                scanf("%f", &s[i].hours[day-1]);
+            }
+        }
+        else if(ch == 2)
+        {
+            show(s);
+        }
+        else if(ch == 3)
+        {
+            fp = fopen("productivity_log.txt", "w");
 
-                for(i = 0; i < 3; i++)
+            for(i = 0; i < 3; i++)
+            {
+                fprintf(fp, "%s", s[i].subject);
+
+                for(j = 0; j < 7; j++)
                 {
-                    printf("Enter %s Hours: ", s[i].subject);
-                    scanf("%f", &s[i].hours[day-1]);
-                }
-                break;
-
-            case 2:
-
-                report(s);
-                break;
-
-            case 3:
-
-                fp = fopen("productivity_log.txt", "w");
-
-                for(i = 0; i < 3; i++)
-                {
-                    fprintf(fp, "%s", s[i].subject);
-
-                    for(j = 0; j < 7; j++)
-                    {
-                        fprintf(fp, ",%.1f", s[i].hours[j]);
-                    }
-
-                    fprintf(fp, "\n");
+                    fprintf(fp, ",%.1f", s[i].hours[j]);
                 }
 
-                fclose(fp);
+                fprintf(fp, "\n");
+            }
 
-                printf("Data Saved.\n");
-                return 0;
+            fclose(fp);
 
-            default:
-                printf("Invalid Choice");
+            printf("Saved");
+            break;
+        }
+        else
+        {
+            printf("Invalid Choice");
         }
     }
 
