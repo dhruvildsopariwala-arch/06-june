@@ -2,13 +2,109 @@ Session 12: StructuresTopics:Declaring, initializing structures.Nested structure
 
 Question 1: Declare a structure named Playlist to store details of a song: title (string), artist (string), and duration in seconds (integer). Initialize one Playlist variable with your favorite song's details and print each field.
 Answer:
+#include <stdio.h>
+
+struct Playlist
+{
+    char title[50];
+    char artist[50];
+    int duration;
+};
+
+int main()
+{
+    struct Playlist song = {"Perfect", "Ed Sheeran", 263};
+
+    printf("Song Title : %s\n", song.title);
+    printf("Artist     : %s\n", song.artist);
+    printf("Duration   : %d seconds\n", song.duration);
+
+    return 0;
+}
 
 Question 2:Create a structure called FoodItem to store Zomato-style menu data: itemName (string), price (float), and rating (float). Initialize an array of 3 FoodItem variables with real menu items and display their details using a loop.
 Answer:
+#include <stdio.h>
+
+struct FoodItem
+{
+    char itemName[30];
+    float price;
+    float rating;
+};
+
+int main()
+{
+    struct FoodItem menu[3] = {
+        {"Veg Burger", 99.0, 4.3},
+        {"Paneer Pizza", 249.0, 4.6},
+        {"Cold Coffee", 120.0, 4.4}
+    };
+
+    for(int i = 0; i < 3; i++)
+    {
+        printf("\nItem : %s", menu[i].itemName);
+        printf("\nPrice : %.2f", menu[i].price);
+        printf("\nRating : %.1f\n", menu[i].rating);
+    }
+
+    return 0;
+}
 
 Question 3:Define a nested structure called MovieShow for a BookMyShow-style app: Movie (string), Screen (integer), and a nested structure Time with hours and minutes (integers). Create and initialize a MovieShow variable for any movie and print its details in the format 'Movie: X, Screen: Y, Time: HH:MM'.
 Answer:
+#include <stdio.h>
+
+struct Time
+{
+    int hours;
+    int minutes;
+};
+
+struct MovieShow
+{
+    char movie[30];
+    int screen;
+    struct Time showTime;
+};
+
+int main()
+{
+    struct MovieShow m = {"Saiyaara", 2, {7, 30}};
+
+    printf("Movie: %s\n", m.movie);
+    printf("Screen: %d\n", m.screen);
+    printf("Time: %02d:%02d\n", m.showTime.hours, m.showTime.minutes);
+
+    return 0;
+}
 
 Question 4:Build a structure called InstaProfile with fields: username (string), followers (integer), and a nested structure Bio with fields: description (string) and age (integer). Initialize an InstaProfile variable with your own details and display all fields.
 Answer:
+#include <stdio.h>
+
+struct Details
+{
+    char desc[30];
+    int age;
+};
+
+struct User
+{
+    char username[20];
+    int followers;
+    struct Details d;
+};
+
+int main()
+{
+    struct User p = {"rahul_07", 950, {"Student", 20}};
+
+    printf("Username : %s\n", p.username);
+    printf("Followers : %d\n", p.followers);
+    printf("Bio : %s\n", p.d.desc);
+    printf("Age : %d\n", p.d.age);
+
+    return 0;
+}
 
