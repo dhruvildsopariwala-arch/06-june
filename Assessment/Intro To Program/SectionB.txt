@@ -194,7 +194,7 @@ int main()
     return 0;
 }
 
-Task 3: Build a menu-driven C program that lets a user log and view personal daily expenses, and
+Task 4: Build a menu-driven C program that lets a user log and view personal daily expenses, and
 saves all records to a text file on exit.
 Define a struct Expense with fields: category (char[30]) and amount (float). Allocate an array
 to store up to 10 Expense entries.
