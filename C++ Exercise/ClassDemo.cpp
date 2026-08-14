@@ -1,5 +1,5 @@
 /*
-class: class is a collection of data member and member function
+class: class is a collection of data member and member function or blueprint
 
 Object: gives permission to access functionality of class
 
@@ -30,3 +30,4 @@ int main(){
 return 0;
 
 }
+

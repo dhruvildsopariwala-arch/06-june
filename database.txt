@@ -1,0 +1,206 @@
+What is Database testing
+To Test a database
+1.whether the data is stored in database
+2.whether data is correct or not
+3.whether complete data is stored or not
+
+
+what is data???
+data is the information of the things...
+i have 7 pen
+
+what is the database???
+Database is the collection of data to access,manage,
+organise electricaly from in the file systems 
+known as the database 
+
+Type of the Databases???
+excel,msaccess,Oracle,Mysql,Sql-servers,monogodb,mariadb,sqlite,oformix
+
+-------------------------SQL------------------------------
+SQL - stand for the structure query language  
+    - can store,retrieve,and manipulate the data into the database
+    - can execute queries against a database
+
+--------------Type of Sql Queries----------------
+DDL - Data Defination Langauage
+      1>CREATE DATABASE 28july2022
+      2>CREATE TABLE students(
+	id int PRIMARY KEY AUTO_INCREMENT,
+	name varchar(50),
+	email varchar(50)
+	);
+    
+      3>ALTER TABLE students ADD address varchar(100) 
+      4>ALTER TABLE students CHANGE address location varchar(100) 
+      5>ALTER TABLE students MODIFY  location varchar(200) 
+      6>ALTER TABLE students DROP  location 
+ALTER TABLE WITH DEFAULT VALUE
+	ALTER TABLE signup ALTER COLUMN USERTYPE SET DEFAULT 'USER';
+
+
+
+      7>TRUNCATE TABLE students	
+drop table [table name];
+--------------------------------------------------------------------------------
+      	
+DML - Data Manipulation Language
+1>INSERT INTO students(name,email)VALUES('durgesh','durgesh@gmail.com')
+2>INSERT INTO students VALUES(' ','jay','jay@gmail.com')
+3>UPDATE students SET email="jay@yahoo.com" WHERE id=2
+4>Update group of particular value
+UPDATE table_name
+SET column_name = new_value
+WHERE column_id IN (value1, value2, value3);
+
+5>DELETE FROM students WHERE city="surat"
+6>Delete group of particular value
+DELETE FROM table_name
+WHERE column_name IN (value1, value2, value3);
+
+--------------------------------------------
+-------------------------Constraint-------------------------
+Primary key - unique+not null,one primary key/table
+Default     - Set Default value
+UNIQUE      - Not Duplicate,null
+Check       - validate the column 
+NOT NULL    - coulumn cant be null
+FORIEGN     - refer the primary key of the other table
+
+CREATE TABLE users(
+
+id int PRIMARY KEY AUTO_INCREMENT,
+ name varchar(50),
+ email varchar(50) UNIQUE,
+ salary int NOT NULL,
+ gender varchar(50) DEFAULT 'MALE',
+ age int CHECK(age<18)   
+);
+
+
+
+
+
+
+---------------------------------Normalization--------------------------
+Normalization is the process of elemeneting the redundancy,duplication,inconsitancy 
+of the table form elemeting columns.
+
+db_users
+id name email password city      country   schoolname city    address country job city   country
+1  dur  dur   123       surat     india     xz         suRt   surat    inday  xyz  SUrt  indan
+2  dur  dur   123       surata     india     xz         suRt   surat    inday  xyz  SUrt  indan
+
+
+db_city
+id cityname 
+1  SURAT
+2  PUNE
+
+db_country
+
+id countryname
+1  INDIA
+
+db_school
+id schoolname city_id country_id
+1  srki        1        2
+3  pkr         2        2
+
+db_jobs 
+id jobname  company   city_id
+1   java      infos    1
+1   php        TOps      1
+
+
+db_user
+id name email password city_id school_id job_id
+1  dur  dur   123       1        1         1
+
+
+----------------------------JOin-------------------------
+CREATE TABLE db_city(
+
+id int PRIMARY KEY AUTO_INCREMENT,
+city_name varchar(50)
+)
+
+CREATE TABLE db_emp(
+
+id int PRIMARY KEY AUTO_INCREMENT,
+name varchar(50),
+city_id int ,
+FOREIGN KEY(city_id) REFERENCES db_city(id)
+)
+
+
+1>SELECT  db_emp.id,db_emp.name,db_city.city_name FROM db_emp INNER JOIN db_city ON db_emp.city_id = db_city.id;
+2>SELECT  db_emp.id,db_emp.name,db_city.city_name FROM db_emp LEFT JOIN db_city ON db_emp.city_id = db_city.id;
+3>SELECT  db_emp.id,db_emp.name,db_city.city_name FROM db_emp RIGHT JOIN db_city ON db_emp.city_id = db_city.id;
+select * from [table1] inner join [table2] on com_col_name_of_table1=com_col_name_of_table2
+select * from order_table LEFT join person ON person_id=person
+select * from order_table right join person ON person_id=person
+
+	DQL
+
+======================================================
+SELECT name
+FROM customer;
+
+SELECT * FROM customer;
+
+SELECT DISTINCT name
+FROM customer;
+
+SELECT cust_name AS first_name
+FROM customer;
+
+And
+==========
+SELECT cust_name
+FROM customer
+WHERE cust_name="ankit" and cust_id=6;
+
+SELECT *
+FROM customer
+WHERE name="jenny" and id=8;
+
+
+OR
+========
+SELECT cust_name
+FROM customer
+WHERE cust_name="ankit" or cust_id=6;
+
+SELECT cust_name
+FROM customer
+WHERE cust_id BETWEEN 1 AND 6;
+
+char in between
+SELECT cust_name
+FROM customer
+WHERE name LIKE "%kt%"; 
+
+starting char
+SELECT cust_name
+FROM customer
+WHERE cust_name LIKE "_a%";
+
+end char
+SELECT cust_name
+FROM customer
+WHERE cust_name LIKE "%t";
+
+SELECT cust_name
+FROM customer
+WHERE cust_name IN ("Bob", "ankit");
+
+=============aggregate functions================
+
+SELECT SUM(salary) FROM employees;
+SELECT AVG(salary) FROM employees;
+SELECT COUNT(*) FROM employees;
+SELECT MIN(salary) FROM employees;
+SELECT MAX(salary) FROM employees;
+SELECT GROUP_CONCAT(employee_name) FROM employees;
+
